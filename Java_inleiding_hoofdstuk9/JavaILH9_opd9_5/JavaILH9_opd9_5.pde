@@ -1,6 +1,8 @@
 String mijnGetal;
 String bob = "bob ";
 String Hallo = "Hallo";
+
+
 void setup(){
 mijnGetal = mijnMethode(bob,Hallo );
 println(mijnGetal);
