@@ -1,12 +1,17 @@
+String mijnGetal;
+String bob = "bob ";
+String Hallo = "Hallo";
 void setup(){
-combinator("com","bi","na","tor");
+mijnGetal = mijnMethode(bob,Hallo );
+println(mijnGetal);
 }
+
 
 void draw(){
-
 }
 
-void combinator(String coma, String comb, String comc, String comd){
-  println(coma + " " + comb + " " + comc + " " + comd);
- 
+String mijnMethode(String bob, String hallo){
+    String totaal =  bob + hallo ;
+    return totaal;
+
 }
