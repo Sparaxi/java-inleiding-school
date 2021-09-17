@@ -1,4 +1,7 @@
 // arraylist
+ArrayList<Tail> tail; 
+
+//create and empty arraylist ( will store snake?)
 
 
 
@@ -11,7 +14,8 @@ Tail t = new Tail();
 void setup(){
   frameRate(7);
   size(500,500);
-  
+  tail = new ArrayList<Tail>();
+
   
 }
 
