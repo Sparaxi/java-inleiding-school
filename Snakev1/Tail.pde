@@ -13,8 +13,8 @@ void display(){
   
   }
  void newsegment(){
-   segmentX.add(-20);
-   segmentY.add(-20);
+   segmentX.add(-10);
+   segmentY.add(-10);
  }
   
   
@@ -38,11 +38,14 @@ void display(){
   void collision(){
     
     if(segmentX.size() > 0){
-      for(int i = 0; i < segmentX.size(); i++){
+      for(int i = 2; i < segmentX.size(); i++){
         if(s.headX == segmentX.get(i) && s.headY == segmentY.get(i)){
-              textSize(80);
-              text("Game Over", 50,50,50);
-              
+          background (0);
+          textSize(80);
+          text("Game Over", 50,100,50);
+          p.punten = 0;
+          segmentX.clear();
+          
         }
       }
     }

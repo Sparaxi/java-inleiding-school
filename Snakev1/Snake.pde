@@ -22,6 +22,7 @@ class Snake{
         headX++; 
     } 
     t.step(headX, headY);
+    t.collision();
     
   }
   
@@ -32,15 +33,15 @@ class Snake{
   
   void bodercollision(){
   if(headX >= 50 || headX < 0){
-    textSize(80);
-    text("Game Over", 50,50,50);
-    stop();
+          background (0);
+          textSize(80);
+          text("Game Over", 50,100,50);
   }
   else if(headY >= 50 || headY < 0){
-    textSize(80);
-    text("Game Over", 50,50,50);
-    stop();
-  }  
+     background (0);
+     textSize(80);
+     text("Game Over", 50,100,50);
+    }  
   }
 }
   
