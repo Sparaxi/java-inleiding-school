@@ -5,16 +5,16 @@ ArrayList<Integer> segmentY = new ArrayList<Integer>();
 
 void display(){
   
-  println(segmentX);
-  println(segmentY);
+  //println(segmentX);
+  //println(segmentY);
   for(int i = 0; i < segmentX.size(); i++){
     rect(segmentX.get(i)*10,segmentY.get(i)*10,10,10);
   }
   
   }
  void newsegment(){
-   segmentX.add(-10);
-   segmentY.add(-10);
+   segmentX.add(-20);
+   segmentY.add(-20);
  }
   
   
@@ -36,9 +36,14 @@ void display(){
   }
   
   void collision(){
+    
     if(segmentX.size() > 0){
-      for(int i = 1; i < segmentX.get(i); i++){
-        println("hier ben ik ");
+      for(int i = 0; i < segmentX.size(); i++){
+        if(s.headX == segmentX.get(i) && s.headY == segmentY.get(i)){
+              textSize(80);
+              text("Game Over", 50,50,50);
+              
+        }
       }
     }
   }

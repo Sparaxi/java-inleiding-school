@@ -22,7 +22,7 @@ class Snake{
         headX++; 
     } 
     t.step(headX, headY);
-    t.collision();
+    
   }
   
   void snake(){

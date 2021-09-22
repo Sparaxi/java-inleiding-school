@@ -20,6 +20,7 @@ void draw(){
   s.snake();
   a.apple();
   s.bodercollision();
+  s.t.collision();
   
   
 }
