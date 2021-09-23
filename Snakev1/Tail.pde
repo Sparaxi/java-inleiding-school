@@ -43,9 +43,6 @@ void display(){
           background (0);
           textSize(80);
           text("Game Over", 50,100,50);
-          p.punten = 0;
-          segmentX.clear();
-          
         }
       }
     }

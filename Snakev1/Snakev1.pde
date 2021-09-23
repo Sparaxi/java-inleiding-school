@@ -38,6 +38,6 @@ void restart(){
   s.headY = 25;
   s.t.segmentX.clear();
   p.punten = 0;
-  return;
+  
     
   }

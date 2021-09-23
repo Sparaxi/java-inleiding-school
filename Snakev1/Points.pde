@@ -7,10 +7,8 @@ class Points{
   rect(500,-1,200,501);
   //------------------
   fill(0);
-  textSize(20);
-  text(punten,565,52);
   textSize(15);
-  text("snekkies: ",505,50);
+  text("snekkies: " + punten,505,50);
   }
   void snekkies(){
   if(s.headX == a.appleX && s.headY == a.appleY){

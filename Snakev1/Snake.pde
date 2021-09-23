@@ -3,14 +3,14 @@ class Snake{
   
   int headX = 25;
   int headY = 25;
-  
+  int direction = 0;
   void setup(){ 
     t = new Tail();
 
   }
   void movement(){
     if(keyCode == UP){
-      headY--;
+      
     }
     if(keyCode == DOWN){
         headY++;
@@ -33,9 +33,9 @@ class Snake{
   
   void bodercollision(){
   if(headX >= 50 || headX < 0){
-          background (0);
-          textSize(80);
-          text("Game Over", 50,100,50);
+    background (0);
+    textSize(80);
+    text("Game Over", 50,100,50);
   }
   else if(headY >= 50 || headY < 0){
      background (0);
