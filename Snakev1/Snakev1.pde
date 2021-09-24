@@ -6,6 +6,7 @@ Snake s =  new Snake();
 Points p = new Points();
 
 Button restart;
+Boolean game_Over = false;
 
 void setup(){
   frameRate(8);
@@ -23,10 +24,13 @@ void draw(){
   background(255);
   s.t.display();
   a.eat();
-  s.movement();
   s.snake();
+  s.t.step(s.headX, s.headY);
   a.apple();
   s.bodercollision();
+  if(keyPressed() == 
+  
+  keyPressed();
   //s.t.collision();
   p.snekkies();
   p.draw();
@@ -38,6 +42,5 @@ void restart(){
   s.headY = 25;
   s.t.segmentX.clear();
   p.punten = 0;
+}
   
-    
-  }

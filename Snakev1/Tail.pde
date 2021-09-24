@@ -35,14 +35,14 @@ void display(){
     }
   }
   
-  void collision(){
+  boolean collision(){
     
     if(segmentX.size() > 0){
       for(int i = 2; i < segmentX.size(); i++){
         if(s.headX == segmentX.get(i) && s.headY == segmentY.get(i)){
-          background (0);
-          textSize(80);
-          text("Game Over", 50,100,50);
+          return true;
+        }else{
+          return false;
         }
       }
     }
