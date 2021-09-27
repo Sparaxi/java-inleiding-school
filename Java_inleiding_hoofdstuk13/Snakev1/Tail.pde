@@ -41,11 +41,10 @@ void display(){
       for(int i = 2; i < segmentX.size(); i++){
         if(s.headX == segmentX.get(i) && s.headY == segmentY.get(i)){
           return true;
-        }else{
-          return false;
         }
       }
     }
+    return false;
   }
 
 

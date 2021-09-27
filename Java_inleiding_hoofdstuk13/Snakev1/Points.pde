@@ -9,10 +9,11 @@ class Points{
   fill(0);
   textSize(15);
   text("snekkies: " + punten,505,50);
-  }
+ }
+  
   void snekkies(){
   if(s.headX == a.appleX && s.headY == a.appleY){
     punten++;
     }
   }
-}
+}//eof
