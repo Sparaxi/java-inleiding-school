@@ -16,6 +16,11 @@ void setup(){
   s.setup();
   a.s = this.s;
   cp = new ControlP5(this);
+  
+  restart = cp.addButton("restart")
+              .setCaptionLabel("Restart")
+              .setPosition(525,252);
+              
 }
 
 void draw(){
@@ -24,21 +29,25 @@ void draw(){
   a.eat();
   s.snake();
   s.t.step(s.headX, s.headY);
+  s.keyPressed();
   a.apple();
   game_over();
   combined_collision();
   p.snekkies();
   p.draw();
   
+  
 }
 
 void restart(){
+  game_over_bool = false;
   s.headX = 25;
   s.headY = 25;
   s.t.segmentX.clear();
   p.punten = 0;
-  game_over_bool = false;
-  s.direction = 0;
+  a.appleX = floor(random(50));
+  a.appleY = floor(random(50));
+  test();
 }
 
 void combined_collision(){
@@ -51,18 +60,41 @@ void combined_collision(){
 }
 
 void game_over(){
-    if(game_over_bool == true){
+   if(game_over_bool == true){
    background(0);
    fill(255,0,0);
    textSize(80);
    text("Game Over", 50,100,50);
    textSize(25);
    text("you have collected " + p.punten + " Snekkies.", 75,175,25);
-   
+   test();
   }
+  
 }
 
-
-
-  
-  
+void test(){
+  if(s.keyPressed() == true && keyCode == UP){
+    s.headX = 25;
+    s.headY = 25;
+    keyCode = SHIFT;
+    
+  }
+    if(s.keyPressed() == true && keyCode == DOWN){
+    s.headX = 25;
+    s.headY = 25;
+    keyCode = SHIFT;
+    
+  }
+    if(s.keyPressed() == true && keyCode == RIGHT){
+    s.headX = 25;
+    s.headY = 25;  
+    keyCode = SHIFT;
+    
+  }
+    if(s.keyPressed() == true && keyCode == LEFT){
+    s.headX = 25;
+    s.headY = 25;  
+    keyCode = SHIFT;
+    
+  }
+}
